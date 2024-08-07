@@ -1,9 +1,10 @@
 import StyledComponentsRegistry from "@/lib/registry";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
+import { ResetCss } from "@/styles/reset";
 
-const inter = Inter({ subsets: ["latin"] });
+import { Ubuntu } from "next/font/google";
+
+const ubuntu = Ubuntu({ subsets: ["latin"], weight: ["400", "500", "700"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,10 +17,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
-      </body>
-    </html>
+    <>
+      <ResetCss />
+      <html lang="en">
+        <body className={ubuntu.className}>
+          <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+        </body>
+      </html>
+    </>
   );
 }
