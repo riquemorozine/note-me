@@ -1,11 +1,13 @@
 import Image from "next/image";
-import { ResetCss } from "@/styles/reset";
+
 import {
   Description,
   HomeMain,
   MainCard,
   Title,
 } from "@/styles/home/HomePageStyle";
+
+import LoginComponent from "@/components/LoginComponent";
 
 export default function Home() {
   return (
@@ -24,6 +26,7 @@ export default function Home() {
             enjoy what is most important in life.
           </Description>
         </MainCard>
+        <LoginComponent />
       </HomeMain>
     </>
   );

@@ -13,6 +13,7 @@ export const HomeMain = styled.main`
   align-items: center;
   height: 100vh;
   width: 100vw;
+  gap: 20rem;
 `;
 
 export const MainCard = styled.div`
@@ -21,11 +22,11 @@ export const MainCard = styled.div`
   justify-content: center;
   align-items: start;
   gap: 2.5rem;
+  width: 40rem;
 `;
 
 export const Title = styled.h1`
   font-size: 2.5rem;
-  text-align: center;
   font-weight: 700;
   color: ${(props) =>
     props.theme.colors === "dark" ? TitleBlackTheme : TitleWhiteTheme};
@@ -33,7 +34,6 @@ export const Title = styled.h1`
 
 export const Description = styled.p`
   font-size: 1.5rem;
-  text-align: center;
   font-weight: 400;
   color: ${(props) =>
     props.theme.colors === "dark"
