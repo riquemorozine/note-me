@@ -8,11 +8,12 @@ import {
 } from "@/styles/home/HomePageStyle";
 
 import LoginComponent from "@/components/LoginComponent";
+import Loading from "./loading";
 
 export default function Home() {
   return (
     <>
-      <HomeMain>
+      {/* <HomeMain>
         <MainCard>
           <Image
             src="/login_page_computer_icon.svg"
@@ -27,7 +28,9 @@ export default function Home() {
           </Description>
         </MainCard>
         <LoginComponent />
-      </HomeMain>
+      </HomeMain> */}
+
+      <Loading dark={false} />
     </>
   );
 }
