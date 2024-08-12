@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { ResetCss } from "@/styles/reset";
 
 import { Ubuntu } from "next/font/google";
+import { LightProvider } from "@/context/LightContext";
 
 const ubuntu = Ubuntu({ subsets: ["latin"], weight: ["400", "500", "700"] });
 
@@ -21,7 +22,9 @@ export default function RootLayout({
       <ResetCss />
       <html lang="en">
         <body className={ubuntu.className}>
-          <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+          <LightProvider>
+            <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+          </LightProvider>
         </body>
       </html>
     </>

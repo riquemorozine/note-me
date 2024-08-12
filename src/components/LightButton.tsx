@@ -1,4 +1,5 @@
 "use client";
+import { useLight } from "@/context/LightContext";
 import { LightButton } from "@/styles/components/lightButton/LightButton";
 
 type LightButtonProps = {
@@ -6,8 +7,12 @@ type LightButtonProps = {
 };
 
 export default function LightButtonComponent({ dark }: LightButtonProps) {
+  const { getLight, setLight } = useLight();
+
   function handleClick() {
-    console.log("clicked");
+    const light = getLight();
+
+    setLight(!light);
   }
 
   return (

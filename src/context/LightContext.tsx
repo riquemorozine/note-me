@@ -1,3 +1,4 @@
+"use client";
 import { createContext, useContext, useState } from "react";
 
 export interface ILightContext {
@@ -11,6 +12,7 @@ export const LightProvider = ({ children }: any) => {
   const [lightResult, setLightResult] = useState(false);
 
   const setLight = (value: boolean) => {
+    console.log(value);
     setLightResult(value);
   };
 

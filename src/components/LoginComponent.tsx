@@ -11,11 +11,19 @@ import {
 
 import LoginInputComponent from "./LoginInput";
 import LoginButton from "./CustomButton";
+import { useLight } from "@/context/LightContext";
 
 export default function LoginComponent() {
+  const { getLight } = useLight();
+
   return (
     <LoginCard>
-      <Image src="/logo.svg" width={300} height={65} alt="logo image" />
+      <Image
+        src={getLight() === true ? "/Logo_dark.svg" : "/logo.svg"}
+        width={300}
+        height={65}
+        alt="logo image"
+      />
       <DiscordButton>
         <Image
           width={24}

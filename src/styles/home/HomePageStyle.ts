@@ -14,6 +14,8 @@ export const HomeMain = styled.main`
   height: 100vh;
   width: 100vw;
   gap: 1.5rem;
+  background-color: ${(props) =>
+    props.theme.main === "dark" ? "#343539" : "#ffffff"};
 `;
 
 export const HomeHeader = styled.header`
@@ -46,14 +48,14 @@ export const Title = styled.h1`
   font-size: 2.5rem;
   font-weight: 700;
   color: ${(props) =>
-    props.theme.colors === "dark" ? TitleBlackTheme : TitleWhiteTheme};
+    props.theme.main === "dark" ? TitleBlackTheme : TitleWhiteTheme};
 `;
 
 export const Description = styled.p`
   font-size: 1.5rem;
   font-weight: 400;
   color: ${(props) =>
-    props.theme.colors === "dark"
+    props.theme.main === "dark"
       ? DescriptionBlackTheme
       : DescriptionWhiteTheme};
 `;
