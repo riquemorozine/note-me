@@ -1,7 +1,7 @@
-import { LoginButton } from "@/styles/components/loginComponent/LoginButton";
+import { CustomButton } from "@/styles/components/loginComponent/CustomButton";
 import Image from "next/image";
 
-interface LoginButtonProps {
+interface CustomButtonProps {
   src?: string;
   label: string;
   alt?: string;
@@ -9,15 +9,15 @@ interface LoginButtonProps {
   height?: number;
 }
 
-export default function LoginButtonComponent({
+export default function CustomButtonComponent({
   src,
   label,
   alt,
   width,
   height,
-}: LoginButtonProps) {
+}: CustomButtonProps) {
   return (
-    <LoginButton>
+    <CustomButton>
       {src && width && height && alt ? (
         <>
           <Image src={src} width={width} height={height} alt={alt} />
@@ -27,6 +27,6 @@ export default function LoginButtonComponent({
       ) : (
         label
       )}
-    </LoginButton>
+    </CustomButton>
   );
 }

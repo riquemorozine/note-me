@@ -1,3 +1,4 @@
+import React from "react";
 import Image from "next/image";
 
 import {
@@ -9,7 +10,7 @@ import {
 } from "@/styles/components/loginComponent/LoginComponent";
 
 import LoginInputComponent from "./LoginInput";
-import LoginButton from "./LoginButton";
+import LoginButton from "./CustomButton";
 
 export default function LoginComponent() {
   return (
