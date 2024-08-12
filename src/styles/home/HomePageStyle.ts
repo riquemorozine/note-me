@@ -9,11 +9,28 @@ import {
 
 export const HomeMain = styled.main`
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
   height: 100vh;
   width: 100vw;
+  gap: 1.5rem;
+`;
+
+export const HomeHeader = styled.header`
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  width: 90%;
+  height: 80px;
+`;
+
+export const HomeSection = styled.section`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 20rem;
+  width: 100%;
+  height: 100%;
 `;
 
 export const MainCard = styled.div`
