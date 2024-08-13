@@ -7,9 +7,10 @@ import { INotesRepository } from 'src/app/domains/repositories/INotesRepository'
 import { NotesRepository } from './repositories/NotesRepository';
 import { UserRepository } from './repositories/UserRepository';
 import { UserEntity } from './entities/UserEntity';
+import { NotesEntity } from './entities/NotesEntity';
 
 @Module({
-  imports: [TypeOrmModule.forFeature([UserEntity, NotesRepository])],
+  imports: [TypeOrmModule.forFeature([UserEntity, NotesEntity])],
   providers: [
     {
       provide: IUserRepository,
@@ -20,6 +21,6 @@ import { UserEntity } from './entities/UserEntity';
       useClass: NotesRepository,
     },
   ],
-  exports: [INotesRepository, IUserRepository],
+  exports: [TypeOrmModule, INotesRepository, IUserRepository],
 })
 export class DatabaseModule {}
